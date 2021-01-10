@@ -1,0 +1,26 @@
+.filter{
+  padding: 1rem;
+}
+
+.filter input,.filter button{
+  border: 1px solid #bbbbbb;
+  padding: 10px;
+}
+
+.filter button{
+  outline: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  background-color: #ffb4b4;
+  color: #ffff;
+}
+
+.filter input::placeholder{
+  font-style: italic;
+  color: #dddddd;
+}
+
+.filter h2{
+  text-align: center;
+  color: #bbbbbb;
+}

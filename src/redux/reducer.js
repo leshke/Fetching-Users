@@ -13,20 +13,7 @@ const reducerApp = (state = initialState, action) => {
     switch (action.type) {
         case SET_USERS:
             return {
-                ...state,
-                users: action.users.map(item => {
-                    let remainder10 = (item.age % 10);
-                    let remainder100 = (item.age % 100);
-
-                    if (remainder100 > 10 && remainder100 < 20) {
-                        return { ...item, age: item.age + ' лет' }
-                    } else if (remainder10 === 1) {
-                        return { ...item, age: item.age + ' год' }
-                    } else if (remainder10 > 1 && remainder10 < 5) {
-                        return { ...item, age: item.age + ' годa' }
-                    }
-                    return { ...item, age: item.age + ' лет' }
-                })
+                ...state, users: action.users
             }
         case TOGGLE_PRELOADER:
             return {
@@ -59,20 +46,10 @@ const togglePreloader = (isFetching) => ({ type: TOGGLE_PRELOADER, isFetching })
 export const toggleFavorite = (id) => ({ type: TOGGLE_FAVORITE, id });
 
 //thunk creators
-export const getUsers = () => async (dispatch) => {
+export const getUsers = (params) => async (dispatch) => {
     dispatch(togglePreloader(true))
-    let response = await usersAPI.getUsers()
+    let response = await usersAPI.getUsers(params)
     dispatch(togglePreloader(false))
-    dispatch(setUsers(response.data))
-}
-
-export const sortByDesk = (type) => async (dispatch) => {
-    let response = await usersAPI.sortUsersByDesk(type)
-    dispatch(setUsers(response.data))
-}
-
-export const sortByAsc = (type) => async (dispatch) => {
-    let response = await usersAPI.sortUsersByAsc(type)
     dispatch(setUsers(response.data))
 }
 

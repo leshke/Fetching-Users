@@ -1,0 +1,23 @@
+{
+    "view": {
+        "table": "Table",
+        "preview": "Preview"
+    },
+    "sorting": {
+      "asc": "By ascending",
+      "desk": "By descending",
+      "id": "ID",
+      "name": "Name",
+      "age": "Age"
+    },
+    "years":{
+        "plural1": "years",
+        "plural2": "years",
+        "plural3": "years"
+    },
+    "filter":{
+        "find": "find",
+        "placeholder": "Name and surname",
+        "result": "Nothing to find, try again"
+    }
+  }

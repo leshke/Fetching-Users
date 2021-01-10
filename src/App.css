@@ -34,7 +34,7 @@
   justify-content: space-between;
 }
 
-.sorting a {
+.translation .btn, .sorting button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -42,23 +42,33 @@
   width: 6.5rem;
   height: 2rem;
   text-decoration: none;
-}
-
-.sorting span {
   display: inline-block;
   border: 1px solid #bbbbbb;
-  height: 2rem;
+  cursor: pointer;
+  outline: none;
 }
 
 .sorting .active {
   background-color: #bbbbbb;
-}
-
-.sorting .active a {
   color: #fff;
 }
 
-.sortDirection a {
+.sortDirection button {
   width: calc(9.75rem + 1px);
   border: 1px solid #bbbbbb;
+}
+
+.translation{
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  width: 3rem;
+}
+
+.btn.active{
+  background-color: #b3b4fd;
+  color: #ffff;
 }
