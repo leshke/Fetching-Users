@@ -12,13 +12,13 @@ In this app are implemented:
  
 3.Sorting (works for both table and preview).
  
-4. A switch that will turn on the English interface without reloading the page (Sort by, Table / Previews, 30 years, ...).
- 
+4.A switch that will turn on the English interface without reloading the page (Sort by, Table / Previews, 30 years, ...).
+
 5.Filtering (text field) by name.
  
-6. Selected list display type, active sorting and filtering are stored in the page URL. When the page is opened, the page address is read using JS and the appropriate filters, sorts, etc. are enabled.
+6.Selected list display type, active sorting and filtering are stored in the page URL. When the page is opened, the page address is read using JS and the appropriate filters, sorts, etc. are enabled.
  
-7. Adding / removing from favorites.(in Redux store)
+7.Adding / removing from favorites.(in Redux store).
 
 ## Stack
 
